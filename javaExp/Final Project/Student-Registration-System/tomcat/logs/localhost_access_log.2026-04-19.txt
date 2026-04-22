@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:12:39 +0530] "GET /Voting-Poll-System/ HTTP/1.1" 200 2262
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:12:39 +0530] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:12:59 +0530] "POST /Voting-Poll-System/poll HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:13:00 +0530] "GET /Voting-Poll-System/poll HTTP/1.1" 200 1689
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:13:12 +0530] "POST /Voting-Poll-System/vote HTTP/1.1" 500 2633
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:13:19 +0530] "GET /Voting-Poll-System/collab HTTP/1.1" 200 379
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:13:25 +0530] "GET /Voting-Poll-System/poll HTTP/1.1" 200 1689
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:16:27 +0530] "GET /Voting-Poll-System/ HTTP/1.1" 200 2335
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:16:53 +0530] "POST /Voting-Poll-System/students HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:16:53 +0530] "GET /Voting-Poll-System/students HTTP/1.1" 200 726
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:18:47 +0530] "GET /Voting-Poll-System/ HTTP/1.1" 200 2335
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:18:47 +0530] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:18:53 +0530] "POST /Voting-Poll-System/students HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:18:53 +0530] "GET /Voting-Poll-System/students HTTP/1.1" 200 864
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:19:07 +0530] "GET /Voting-Poll-System/index.html HTTP/1.1" 200 2335
+0:0:0:0:0:0:0:1 - - [19/Apr/2026:19:19:09 +0530] "GET /Voting-Poll-System/students HTTP/1.1" 200 864
