@@ -7,12 +7,12 @@ import java.sql.*;
 //{for dynamic query -> object prepared Statement (insert intro tablename values(?,?,?);
 // for static query- > object of Statement}
 
-//{Execute the statemnt obj
+//{Execute the statemnt obj}
 // 3 ways
 // executeupdate()->ddl or dml (return number of rows affected)
-// executQuery()-> dql (return )
+// executQuery()-> dql (return result)
 // execute()-> for any type of query
-// ex}
+// }
 public class learningJDBC {
     private final static String url = "jdbc:mysql://localhost:3306/?user=root";
     private final static String username = "root";
@@ -33,7 +33,5 @@ public class learningJDBC {
             System.out.println(id + " " + name + " "+ marks);
         }
         connection.close();
-
-
     }
 }

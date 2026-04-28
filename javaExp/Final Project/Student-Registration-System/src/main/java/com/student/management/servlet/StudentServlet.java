@@ -24,7 +24,6 @@ public class StudentServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Student> studentList = new ArrayList<>();
 
-        // Retrieve messages from session and pass them to request for JSP rendering
         HttpSession session = req.getSession();
         String successMessage = (String) session.getAttribute("successMessage");
         String errorMessage = (String) session.getAttribute("errorMessage");
@@ -37,7 +36,6 @@ public class StudentServlet extends HttpServlet {
             req.setAttribute("errorMessage", errorMessage);
             session.removeAttribute("errorMessage");
         }
-
         try (Connection conn = DBConnection.getConnection()) {
             String sql = "SELECT * FROM students ORDER BY created_at DESC";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -57,10 +55,8 @@ public class StudentServlet extends HttpServlet {
             req.setAttribute("errorMessage", "Database error: " + e.getMessage());
         }
 
-        // Use req.setAttribute to send data to JSP
         req.setAttribute("studentList", studentList);
 
-        // Forward request using RequestDispatcher
         req.getRequestDispatcher("/students.jsp").forward(req, resp);
     }
 
@@ -85,12 +81,11 @@ public class StudentServlet extends HttpServlet {
                 session.setAttribute("errorMessage", "Invalid ID provided for deletion.");
             }
         } else {
-            // Handle add action
+
             String name = req.getParameter("name");
             String email = req.getParameter("email");
             String course = req.getParameter("course");
 
-            // Basic Input Validation
             if (name == null || name.trim().isEmpty() ||
                 email == null || email.trim().isEmpty() ||
                 course == null || course.trim().isEmpty()) {
@@ -109,8 +104,6 @@ public class StudentServlet extends HttpServlet {
                 }
             }
         }
-
-        // Implement PRG pattern (Post/Redirect/Get)
         resp.sendRedirect("students");
     }
 }
